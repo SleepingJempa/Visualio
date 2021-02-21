@@ -2,7 +2,6 @@
   "name": "visualio",
   "version": "1.0.0",
   "description": "Algorithms Visualizations",
-  "main": "index.js",
   "scripts": {
     "build": "webpack --config ./bundler/webpack.prod.js",
     "dev": "webpack serve --config ./bundler/webpack.dev.js"
@@ -38,6 +37,7 @@
     "mini-css-extract-plugin": "^1.3.8",
     "portfinder-sync": "^0.0.2",
     "raw-loader": "^4.0.2",
-    "style-loader": "^2.0.0"
+    "style-loader": "^2.0.0",
+    "three": "^0.125.2"
   }
 }
