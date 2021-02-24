@@ -1,0 +1,3 @@
+[submodule "libs/jsop"]
+	path = libs/jsop
+	url = git://github.com/SleepingJempa/JSOP.git

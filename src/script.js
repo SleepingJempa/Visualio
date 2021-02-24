@@ -17,7 +17,7 @@ const scene = new THREE.Scene()
 
 
 // Object
-const myGeometry = new THREE.BoxGeometry(1, 1, 1)
+const myGeometry = new THREE.CircleGeometry(0.2, 32)
 // const myGeometry = new THREE.Geometry()
 
 // const v1 = new THREE.Vector3(0, 0, 0)
@@ -31,9 +31,10 @@ const myGeometry = new THREE.BoxGeometry(1, 1, 1)
 // myGeometry.faces.push(face)
 
 
+
 const cubeMaterial = new THREE.MeshBasicMaterial({
     color: '#ff0000',
-    wireframe: true
+    // wireframe: true
 })
 
 // const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial)
@@ -58,17 +59,17 @@ const controls = new OrbitControls(camera, canvas)
 controls.enableDamping = true
 const clock = new THREE.Clock()
 
-gsap.to(cubeMesh.position, {
-    duration: 2,
-    delay: 1,
-    x: 2
-})
+// gsap.to(cubeMesh.position, {
+//     duration: 2,
+//     delay: 1,
+//     x: 2
+// })
 
-gsap.to(cubeMesh.position, {
-    duration: 2,
-    delay: 4,
-    x: 0
-})
+// gsap.to(cubeMesh.position, {
+//     duration: 2,
+//     delay: 4,
+//     x: 0
+// })
 
 window.addEventListener('resize', () => {
     sizes.width = window.innerWidth,
@@ -98,11 +99,11 @@ window.addEventListener('dblclick', () => {
     }
 })
 
-const tick = () => {
+const draw = () => {
     controls.update()
-    cubeMesh.rotation.y += 0.01
+    // cubeMesh.rotation.y += 0.01
     renderer.render(scene, camera)
-    window.requestAnimationFrame(tick)
+    window.requestAnimationFrame(draw)
 }
 
-tick()
+draw()
